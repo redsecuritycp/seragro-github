@@ -1874,26 +1874,6 @@ ul li::before {
     }
 }
 /* ========================================== */
-/* BOTÓN VER PRESENTACIÓN */
-/* ========================================== */
-.ver-presentacion-btn {
-    position: fixed;
-    bottom: 190px;
-    right: 20px;
-    background: #6B8E23;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    padding: 16px 32px;
-    font-size: 16px;
-    font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
-    cursor: pointer;
-    z-index: 9997;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-}
 
 .ver-presentacion-btn:hover {
     background: #556B2F;
@@ -1925,22 +1905,6 @@ ul li::before {
     }
 }
 
-/* ========================================== */
-/* MODAL DE PRESENTACIÓN */
-/* ========================================== */
-.presentacion-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
 
 .presentacion-modal.active {
     display: flex;
