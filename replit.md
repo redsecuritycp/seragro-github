@@ -53,6 +53,12 @@ Preferred communication style: Simple, everyday language.
 - **Mavilda Chat Widget**: An AI-powered, session-based customer support chat with a webhook integration for backend processing and auto-greeting.
     - **Logo Fix**: Image renamed to `mavilda-logo.png` (without spaces) to ensure compatibility in both development and production builds. Path: `/imagenes/mavilda-logo.png`
     - **Mobile Optimization**: Uses `@media (max-width: 768px)` with centered layout (`left: 50%` + `transform: translateX(-50%)`), `max-height: 280px` to prevent compression when Android keyboard appears, and `env(safe-area-inset-bottom)` for proper keyboard handling. This ensures the Mavilda logo remains visible and chat content doesn't get cut off when user is typing on mobile devices.
+- **Video Presentation Modal**: A centered modal displaying a promotional video (`/videos/mavilda-presentacion.mp4`).
+    - **Trigger Button**: Green olive-colored button labeled "Ver presentación" positioned directly below the "CONTACTANOS" button in the hero section, using flexbox column layout (`.hero-buttons` container).
+    - **Modal Design**: Semi-transparent dark overlay with centered content, featuring rounded corners (`border-radius: 16px`) on video player.
+    - **Video Behavior**: Video does NOT autoplay - only plays when user clicks. Uses `preload="metadata"` to prevent automatic playback. Video occupies 90% modal width with responsive sizing.
+    - **Close Functionality**: White circular X button in top-right corner, plus click-outside-to-close on overlay and Escape key support. Fade-out animation on close with automatic video pause and reset.
+    - **JavaScript**: Implemented in `/js/presentacion-modal.js` with DOMContentLoaded event handling and proper cleanup on modal close.
 
 ### Styling Approach
 - **CSS Variables**: Centralized color scheme, predominantly agricultural green (#2E7D32, #1B5E20).
