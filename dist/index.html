@@ -20,8 +20,9 @@
     </script>
 
 <link rel="stylesheet" href="/call-button-fix.css">
-  <script type="module" crossorigin src="/assets/unified-contact-YcKV1Kgt.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/style-CLGhCpqj.css">
+  <script type="module" crossorigin src="/assets/main-BD8Vo3Gv.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/unified-contact-q12_lZLe.js">
+  <link rel="stylesheet" crossorigin href="/assets/style-Bia5-co-.css">
 </head>
 
 <body>
@@ -66,7 +67,10 @@
             <h1 class="hero-title">Drones Agrícolas</h1>
             <h2 class="hero-subtitle">Tecnología avanzada: optimiza la producción agrícola, minimiza el impacto
                 ambiental</h2>
-            <a href="#contacto" class="btn-primary">Contactanos</a>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn-primary">Contactanos</a>
+                <button id="ver-presentacion-btn" class="ver-presentacion-btn">Ver presentación</button>
+            </div>
         </div>
         <div class="hero-video">
             <video autoplay muted loop>
@@ -304,6 +308,18 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal de Presentación -->
+    <div id="presentacion-modal" class="presentacion-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button id="close-modal-btn" class="close-modal-btn">&times;</button>
+            <video id="presentacion-video" controls preload="metadata">
+                <source src="/videos/mavilda-presentacion.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+    </div>
 
 </body>
 

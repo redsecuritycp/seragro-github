@@ -1875,35 +1875,12 @@ ul li::before {
 }
 /* ========================================== */
 
-.ver-presentacion-btn:hover {
-    background: #556B2F;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-}
 
-.ver-presentacion-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-    .ver-presentacion-btn {
-        bottom: 140px;
-        right: 50%;
-        transform: translateX(50%);
-        padding: 14px 28px;
-        font-size: 15px;
-    }
-
-    .ver-presentacion-btn:hover {
-        transform: translateX(50%) translateY(-2px);
-    }
-
-    .ver-presentacion-btn:active {
-        transform: translateX(50%) translateY(0);
-    }
 }
+
 
 
 .presentacion-modal.active {
@@ -1985,4 +1962,48 @@ ul li::before {
         height: 36px;
         font-size: 24px;
     }
+}
+
+/* ========================================== */
+/* HERO BUTTONS CONTAINER */
+/* ========================================== */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.hero-buttons .btn-primary,
+
+/* ========================================== */
+/* BOTÓN VER PRESENTACIÓN - LIMPIO */
+/* ========================================== */
+.ver-presentacion-btn {
+    background: #6B8E23 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 16px 32px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease !important;
+    letter-spacing: 0.5px !important;
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.ver-presentacion-btn:hover {
+    background: #556B2F !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.ver-presentacion-btn:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
 }
