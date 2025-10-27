@@ -1538,7 +1538,7 @@ video {
     color: var(--light-color);
     padding: 0.8rem 2rem;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0;
     margin-top: 1rem;
     transition: all 0.3s ease;
     font-weight: 600;
@@ -1994,7 +1994,7 @@ ul li::before {
 /* BOTÓN VER PRESENTACIÓN - LIMPIO */
 /* ========================================== */
 .ver-presentacion-btn {
-    background: #6B8E23 !important;
+    background: var(--primary-color) !important;
     color: white !important;
     border: none !important;
     border-radius: 50px !important;
@@ -2011,7 +2011,7 @@ ul li::before {
 }
 
 .ver-presentacion-btn:hover {
-    background: #556B2F !important;
+    background: var(--secondary-color) !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
 }
