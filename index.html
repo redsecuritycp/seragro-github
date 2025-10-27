@@ -304,9 +304,27 @@
         </div>
     </footer>
 
+    <!-- Botón Ver Presentación -->
+    <button id="ver-presentacion-btn" class="ver-presentacion-btn">
+        Ver presentación
+    </button>
+
+    <!-- Modal de Presentación -->
+    <div id="presentacion-modal" class="presentacion-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button id="close-modal-btn" class="close-modal-btn">&times;</button>
+            <video id="presentacion-video" controls>
+                <source src="/videos/mavilda-presentacion.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+    </div>
+
     <script type="module" src="/main-app.js"></script>
     <script type="module" src="/js/mavilda-chat.js"></script>
     <script type="module" src="/js/unified-contact.js"></script>
+    <script type="module" src="/js/presentacion-modal.js"></script>
 </body>
 
 </html>
