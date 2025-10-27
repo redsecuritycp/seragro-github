@@ -35,9 +35,5 @@ expertMode = true
 localPort = 5000
 externalPort = 80
 
-[[ports]]
-localPort = 46503
-externalPort = 3001
-
 [webview]
 port = 5000
