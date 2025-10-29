@@ -273,6 +273,15 @@ function createOptionsMenu() {
 }
 
 // ==========================================
+// DETECTAR SOLO DISPOSITIVOS ANDROID
+// ==========================================
+function isAndroidDevice() {
+    const userAgent = navigator.userAgent;
+    // Detecta SOLO Android, sin /Mobile/i para evitar detectar iPhone
+    return /Android/i.test(userAgent) || /Pixel/i.test(userAgent);
+}
+
+// ==========================================
 // CREAR INDICADOR DE LLAMADA
 // ==========================================
 function createCallIndicator() {
@@ -284,43 +293,26 @@ function createCallIndicator() {
     indicator.id = "call-indicator";
     indicator.className = "call-indicator";
 
-    const userAgent = navigator.userAgent;
-    const isAndroid =
-        /Android/i.test(userAgent) ||
-        /Pixel/i.test(userAgent) ||
-        /Mobile/i.test(userAgent);
+    const isAndroid = isAndroidDevice();
 
-    console.log("User Agent:", userAgent);
-    console.log("¿Detectado como Android/Móvil?:", isAndroid);
-
+    // Versión para Android: botón circular con ícono de teléfono
     if (isAndroid) {
-        console.log("Creando botón para Android");
         indicator.innerHTML = `
-            <button class="end-call-btn" id="end-call-btn" 
-                style="
-                    background: #d32f2f !important;
-                    color: white !important;
-                    padding: 10px 20px !important;
-                    font-size: 16px !important;
-                    font-weight: 600 !important;
-                    border: 2px solid white !important;
-                    border-radius: 30px !important;
-                    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4) !important;
-                    cursor: pointer !important;
-                ">
-                Colgar
-            </button>
+            <div class="call-indicator-content">
+                <div class="call-status">
+                    <div class="pulse-dot"></div>
+                    <span class="call-text">En llamada...</span>
+                </div>
+                <button class="end-call-btn end-call-btn-circular" id="end-call-btn" aria-label="Colgar llamada">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 9c-1.6 0-3.15.25-4.6.72v3.1c0 .39-.23.74-.56.9-.98.49-1.87 1.12-2.66 1.85-.18.18-.43.28-.7.28-.28 0-.53-.11-.71-.29L.29 13.08c-.18-.17-.29-.42-.29-.7 0-.28.11-.53.29-.71C3.34 8.78 7.46 7 12 7s8.66 1.78 11.71 4.67c.18.18.29.43.29.71 0 .28-.11.53-.29.71l-2.48 2.48c-.18.18-.43.29-.71.29-.27 0-.52-.11-.7-.28-.79-.74-1.69-1.36-2.67-1.85-.33-.16-.56-.5-.56-.9v-3.1C15.15 9.25 13.6 9 12 9z"/>
+                    </svg>
+                </button>
+            </div>
         `;
-        indicator.style.position = "fixed";
-        indicator.style.top = "50%";
-        indicator.style.left = "50%";
-        indicator.style.transform = "translate(-50%, -50%)";
-        indicator.style.background = "transparent";
-        indicator.style.padding = "0";
-        indicator.style.borderRadius = "0";
-        indicator.style.zIndex = "99999";
-    } else {
-        console.log("Creando diseño normal para PC/iPhone");
+    } 
+    // Versión para PC e iPhone: botón rectangular con texto "Colgar"
+    else {
         indicator.innerHTML = `
             <div class="call-indicator-content">
                 <div class="call-status">
