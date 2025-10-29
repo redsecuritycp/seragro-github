@@ -714,49 +714,42 @@ function addStyles() {
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
         }
 
+        /* Botón Colgar - Android (circular rojo con ícono) */
+        .end-call-btn-circular {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            max-width: 60px;
+            min-height: 60px;
+            border-radius: 50%;
+            background: #f44336;
+            color: white;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(244, 67, 54, 0.4);
+        }
+
+        .end-call-btn-circular:hover {
+            background: #d32f2f;
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(244, 67, 54, 0.5);
+        }
+
+        .end-call-btn-circular:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+        }
+
         .vapi-btn {
             display: none !important;
             visibility: hidden !important;
             opacity: 0 !important;
             pointer-events: none !important;
-        }
-
-        .is-android .call-indicator {
-            position: fixed !important;
-            top: 50% !important;
-            left: 50% !important;
-            transform: translate(-50%, -50%) !important;
-            bottom: auto !important;
-            background: transparent !important;
-            padding: 0 !important;
-            border-radius: 0 !important;
-            width: auto !important;
-            max-width: none !important;
-        }
-
-        .is-android .call-indicator-content {
-            gap: 0 !important;
-            flex-direction: column !important;
-        }
-
-        .is-android .call-status {
-            display: none !important;
-        }
-
-        .is-android .end-call-btn {
-            background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
-            color: white;
-            border: 3px solid white;
-            padding: 20px 50px;
-            font-size: 20px;
-            min-height: 60px;
-            min-width: 200px;
-            max-width: 250px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-radius: 60px;
-            box-shadow: 0 8px 30px rgba(211, 47, 47, 0.6);
         }
 
         @media (max-width: 768px) {
@@ -869,21 +862,17 @@ function addStyles() {
                 max-width: 100px;
             }
 
-            .is-android .call-indicator-content {
-                gap: 0 !important;
-            }
-
-            .is-android .call-status {
-                display: none !important;
-            }
-
-            .is-android .end-call-btn {
-                padding: 18px 45px;
-                font-size: 18px;
+            .end-call-btn-circular {
+                width: 55px;
+                height: 55px;
+                min-width: 55px;
+                max-width: 55px;
                 min-height: 55px;
-                min-width: 180px;
-                max-width: 220px;
-                letter-spacing: 0.5px;
+            }
+
+            .end-call-btn-circular svg {
+                width: 22px;
+                height: 22px;
             }
         }
 
@@ -906,26 +895,22 @@ function addStyles() {
                 letter-spacing: -0.7px;
             }
 
+            .end-call-btn-circular {
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+                max-width: 50px;
+                min-height: 50px;
+            }
+
+            .end-call-btn-circular svg {
+                width: 20px;
+                height: 20px;
+            }
+
             .pulse-dot {
                 width: 12px;
                 height: 12px;
-            }
-
-            .is-android .call-indicator-content {
-                gap: 0 !important;
-            }
-
-            .is-android .call-status {
-                display: none !important;
-            }
-
-            .is-android .end-call-btn {
-                padding: 16px 40px;
-                font-size: 16px;
-                min-height: 50px;
-                min-width: 160px;
-                max-width: 200px;
-                letter-spacing: 0.3px;
             }
 
             .did-modal-content {
