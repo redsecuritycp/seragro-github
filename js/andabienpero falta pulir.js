@@ -9,7 +9,8 @@ const CONFIG = {
     vapiPublicKey: "5a29292f-d9cc-4a21-bb7e-ff8df74763cd",
     vapiAssistantId: "776543a0-f4a2-4ed7-ad7a-f1fe0f6fd4d4",
     // D-ID Config
-    dIdClientKey: "Z29vZ2xlLW9hdXRoMnwxMTczNjE5MjY1MDM0NDgwNjY0ODE6cG92c2R4SXZfRjFQOGJvbXlLc3Ew",
+    dIdClientKey:
+        "Z29vZ2xlLW9hdXRoMnwxMTczNjE5MjY1MDM0NDgwNjY0ODE6cG92c2R4SXZfRjFQOGJvbXlLc3Ew",
     dIdAgentId: "v2_agt_GvlTAw-a",
     primaryColor: "#2E7D32",
     secondaryColor: "#1B5E20",
@@ -155,7 +156,7 @@ function clearCacheAndServiceWorkers() {
 // ==========================================
 function loadDIdAgent() {
     const modal = document.getElementById("did-video-modal");
-    
+
     modal.classList.add("active");
     document.body.style.overflow = "hidden";
 
@@ -164,25 +165,25 @@ function loadDIdAgent() {
         return;
     }
 
-    const script = document.createElement('script');
-    script.type = 'module';
-    script.src = 'https://agent.d-id.com/v2/index.js';
-    script.setAttribute('data-mode', 'full');
-    script.setAttribute('data-client-key', CONFIG.dIdClientKey);
-    script.setAttribute('data-agent-id', CONFIG.dIdAgentId);
-    script.setAttribute('data-name', 'did-agent');
-    script.setAttribute('data-monitor', 'true');
-    script.setAttribute('data-target-id', 'did-agent-container');
+    const script = document.createElement("script");
+    script.type = "module";
+    script.src = "https://agent.d-id.com/v2/index.js";
+    script.setAttribute("data-mode", "full");
+    script.setAttribute("data-client-key", CONFIG.dIdClientKey);
+    script.setAttribute("data-agent-id", CONFIG.dIdAgentId);
+    script.setAttribute("data-name", "did-agent");
+    script.setAttribute("data-monitor", "true");
+    script.setAttribute("data-target-id", "did-agent-container");
 
     script.onload = () => {
-        console.log('✅ D-ID Agent cargado');
+        console.log("✅ D-ID Agent cargado");
         dIdLoaded = true;
     };
 
     script.onerror = () => {
-        console.error('❌ Error al cargar D-ID');
+        console.error("❌ Error al cargar D-ID");
         closeDIdModal();
-        alert('Error al cargar videollamada. Intentá nuevamente.');
+        alert("Error al cargar videollamada. Intentá nuevamente.");
     };
 
     document.body.appendChild(script);
@@ -355,8 +356,10 @@ function createDIdModal() {
     `;
     document.body.appendChild(modal);
 
-    document.getElementById("did-close-btn").addEventListener("click", closeDIdModal);
-    
+    document
+        .getElementById("did-close-btn")
+        .addEventListener("click", closeDIdModal);
+
     modal.addEventListener("click", (e) => {
         if (e.target === modal) {
             closeDIdModal();
@@ -450,6 +453,7 @@ function addStyles() {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             font-family: 'Open Sans', sans-serif;
             opacity: 0;
+            transform: translateX(20px);
         }
 
         .contact-option span {
@@ -477,22 +481,9 @@ function addStyles() {
         }
 
         @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
             to {
                 opacity: 1;
                 transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
             }
         }
 
@@ -798,32 +789,15 @@ function addStyles() {
                 max-width: calc(100vw - 40px);
             }
 
-            .unified-contact-menu.show {
-                transform: translateX(-50%) translateY(0);
-            }
-
             .contact-option {
                 padding: 13px 22px;
                 font-size: 14px;
                 gap: 10px;
-                width: 100%;
-                max-width: 280px;
-                justify-content: center;
-            }
-
-            .unified-contact-menu.show .contact-option {
-                transform: translateX(0);
-                animation: fadeIn 0.4s ease-out forwards;
-            }
-
-            .contact-option:hover {
-                transform: scale(1.03);
             }
 
             .did-modal-content {
-                width: 92%;
-                height: 75vh;
-                max-height: 600px;
+                width: 95%;
+                height: 90vh;
                 border-radius: 12px;
             }
 
@@ -937,9 +911,8 @@ function addStyles() {
             }
 
             .did-modal-content {
-                width: 95%;
-                height: 70vh;
-                max-height: 550px;
+                width: 98%;
+                height: 95vh;
                 border-radius: 8px;
             }
 
@@ -949,10 +922,6 @@ function addStyles() {
                 width: 40px;
                 height: 40px;
                 font-size: 20px;
-            }
-
-            .contact-option {
-                max-width: 260px;
             }
         }
     `;
