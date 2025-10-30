@@ -189,8 +189,27 @@ function loadDIdAgent() {
 
 function closeDIdModal() {
     const modal = document.getElementById("did-video-modal");
+    const container = document.getElementById("did-agent-container");
+    
+    // Limpiar completamente el contenedor del agente para destruir la instancia de D-ID
+    if (container) {
+        container.innerHTML = "";
+    }
+    
+    // Remover el script de D-ID del DOM
+    const didScript = document.querySelector('script[data-name="did-agent"]');
+    if (didScript) {
+        didScript.remove();
+    }
+    
+    // Resetear el estado para permitir volver a cargar limpio
+    dIdLoaded = false;
+    
+    // Ocultar modal y restaurar scroll
     modal.classList.remove("active");
     document.body.style.overflow = "";
+    
+    console.log("✅ D-ID Agent detenido y limpiado");
 }
 
 // ==========================================
