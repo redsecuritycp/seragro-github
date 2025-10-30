@@ -191,25 +191,27 @@ function closeDIdModal() {
     const modal = document.getElementById("did-video-modal");
     const container = document.getElementById("did-agent-container");
     
-    // Limpiar completamente el contenedor del agente para destruir la instancia de D-ID
+    // PASO 1: Eliminar todos los scripts de D-ID del DOM
+    const didScripts = document.querySelectorAll('script[src*="d-id.com"], script[data-name="did-agent"]');
+    didScripts.forEach(script => script.remove());
+    
+    // PASO 2: Limpiar y recrear el contenedor completamente para forzar destrucción del agente
     if (container) {
-        container.innerHTML = "";
+        const parent = container.parentNode;
+        const newContainer = document.createElement("div");
+        newContainer.id = "did-agent-container";
+        newContainer.className = "did-agent-container";
+        parent.replaceChild(newContainer, container);
     }
     
-    // Remover el script de D-ID del DOM
-    const didScript = document.querySelector('script[data-name="did-agent"]');
-    if (didScript) {
-        didScript.remove();
-    }
-    
-    // Resetear el estado para permitir volver a cargar limpio
+    // PASO 3: Resetear el estado para permitir volver a cargar limpio
     dIdLoaded = false;
     
-    // Ocultar modal y restaurar scroll
+    // PASO 4: Ocultar modal y restaurar scroll
     modal.classList.remove("active");
     document.body.style.overflow = "";
     
-    console.log("✅ D-ID Agent detenido y limpiado");
+    console.log("✅ D-ID Agent destruido completamente");
 }
 
 // ==========================================
