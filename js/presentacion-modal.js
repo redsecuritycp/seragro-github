@@ -12,13 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.addEventListener('click', function() {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevenir scroll
+        
+        // ✅ Activar audio y reproducir automáticamente
+        video.muted = false;
+        video.play().catch(err => {
+            console.log('Error al reproducir video:', err);
+        });
     });
 
     // Cerrar modal
     function closeModal() {
         modal.classList.remove('active');
         video.pause(); // Pausar video al cerrar
-        video.currentTime = 0; // Reiniciar video
+        video.muted = true; // Silenciar video
+        video.currentTime = 0; // Reiniciar video al inicio
         document.body.style.overflow = ''; // Restaurar scroll
     }
 
