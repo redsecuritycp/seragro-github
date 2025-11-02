@@ -154,6 +154,8 @@ function addStyles() {
             overflow-y: auto;
             padding: 16px;
             background: #f5f5f5;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
         }
 
         .chat-message {
@@ -284,12 +286,17 @@ function addStyles() {
         @media (max-width: 768px) {
             #mavilda-chat-window {
                 width: calc(100vw - 32px);
-                height: calc(100vh - 180px);
-                max-height: 280px;
+                height: auto;
+                max-height: calc(100vh - 200px);
                 left: 50%;
                 right: auto;
                 transform: translateX(-50%);
                 bottom: calc(90px + env(safe-area-inset-bottom, 0px));
+            }
+            
+            #mavilda-chat-messages {
+                max-height: calc(100vh - 320px);
+                min-height: 200px;
             }
         }
     `;
