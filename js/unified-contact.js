@@ -890,8 +890,20 @@ function toggleMenu() {
 // ==========================================
 // HANDLERS DE OPCIONES
 // ==========================================
+function generateWhatsAppMessage() {
+    const greetings = ["Hola", "Buenos días", "Buenas tardes", "Hola!"];
+    const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const timestamp = `${hours}:${minutes}`;
+    
+    return `${randomGreeting}, vengo desde el sitio de SER AGRO (${timestamp})`;
+}
+
 function handleWhatsAppClick() {
-    const url = `https://api.whatsapp.com/send?phone=${CONFIG.whatsappPhone}&text=${encodeURIComponent(CONFIG.whatsappMessage)}`;
+    const message = generateWhatsAppMessage();
+    const url = `https://api.whatsapp.com/send?phone=${CONFIG.whatsappPhone}&text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
     toggleMenu();
 }
