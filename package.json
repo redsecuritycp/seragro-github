@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "clean": "lsof -ti:5000 | xargs kill -9 2>/dev/null || true",
+    "dev:fresh": "npm run clean && vite",
     "build": "vite build",
     "preview": "vite preview"
   },
