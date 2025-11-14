@@ -5,7 +5,7 @@ import Vapi from "@vapi-ai/web";
 // ==========================================
 const CONFIG = {
     whatsappPhone: "5493401513895",
-    whatsappMessage: "",
+    whatsappMessage: "Hola, vengo desde el sitio de SER AGRO",
     vapiPublicKey: "5a29292f-d9cc-4a21-bb7e-ff8df74763cd",
     vapiAssistantId: "776543a0-f4a2-4ed7-ad7a-f1fe0f6fd4d4",
     // D-ID Config
