@@ -33,7 +33,7 @@ Preferred communication style: Simple, everyday language.
 - **Mobile Navigation**: Hamburger menu with toggle functionality.
 - **Dropdown Menus**: Interactive menus for equipment and downloads.
 - **Unified Contact System**: A single "Hablá con nosotros" button (green oval, pulsing animation) located at the bottom right, expanding into a menu with three communication options:
-    - **WhatsApp**: Direct messaging.
+    - **WhatsApp**: Direct messaging to +54 9 3401 51-3895 with anti-spam protection using variable messages. Each click generates a unique message combining random greetings ("Hola", "Buenos días", "Buenas tardes", "Hola!") with timestamp in HH:MM format (e.g., "Hola, vengo desde el sitio de SER AGRO (14:52)"). This prevents WhatsApp from flagging repeated messages as spam and improves delivery rates to n8n backend.
     - **Chat**: Opens the Mavilda AI assistant widget.
     - **Llamar**: Initiates a voice call via Vapi AI.
     - **Android Fix**: Uses a mobile-specific `subtlePulseMobile` animation that combines `translateX(-50%)` with `scale()` to maintain button centering during the pulse animation. The standard `subtlePulse` animation was overwriting the `transform: translateX(-50%)` centering, causing the button to drift right and text to be cut off on Android devices with wider Roboto fonts. The mobile-specific keyframes preserve both the centering transform and the pulse effect simultaneously.
