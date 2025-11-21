@@ -2036,8 +2036,8 @@ ul li::before {
 
 .precio-imagen {
     flex: 1;
-    min-width: 280px;
-    max-width: 550px;
+    min-width: 240px;
+    max-width: 350px;
     width: 100%;
     height: auto;
     object-fit: contain;
