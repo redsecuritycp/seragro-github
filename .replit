@@ -36,12 +36,12 @@ localPort = 5000
 externalPort = 80
 
 [[ports]]
-localPort = 45081
-externalPort = 3000
+localPort = 34291
+externalPort = 3001
 
 [[ports]]
-localPort = 45127
-externalPort = 3001
+localPort = 45081
+externalPort = 3000
 
 [webview]
 port = 5000
