@@ -2036,8 +2036,8 @@ ul li::before {
 .precio-image {
     display: block !important;
     width: 45%;
-    max-width: 400px;
-    max-height: 250px;
+    max-width: 600px;
+    max-height: 375px;
     height: auto;
     object-fit: contain;
     border-radius: 8px;
