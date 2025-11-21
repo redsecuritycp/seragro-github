@@ -65,6 +65,7 @@ Preferred communication style: Simple, everyday language.
         - **Button State Validation**: Checks button is enabled before activation
         - **Event Target Validation**: Verifies click originates from button, not event bubbling
         - **Contact Menu Integration**: Button automatically disables when "Hablá con nosotros" menu opens (managed in `/js/unified-contact.js`)
+        - **Safari/iPhone Synthetic Click Protection**: Button `#ver-presentacion-btn` is physically disabled (`disabled=true`) when Mavilda chat opens and re-enabled when chat closes. This prevents Safari from synthesizing automatic clicks on the first focusable button when users press Enter in the chat input field - a browser behavior specific to iOS/Safari that cannot be prevented with event flags alone. Implemented in `openChat()` and `closeChat()` functions in `/js/mavilda-chat.js`.
         - This prevents interference with Mavilda chat interactions and other user workflows
         - Global flag `window.isChatOpen` set in `/js/mavilda-chat.js` to coordinate state between chat and modal
     - **Mobile Protection**: Uses `preventDefault()` and `stopPropagation()` on button click events to prevent ghost taps on mobile devices.
