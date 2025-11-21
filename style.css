@@ -2020,3 +2020,37 @@ ul li::before {
     transform: translateY(0) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
 }
+
+/* ========================================== */
+/* IMÁGENES DE PRECIOS - RESPONSIVE */
+/* ========================================== */
+.precio-images-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+}
+
+.precio-image {
+    width: 45%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+
+/* Mobile - Pantallas menores a 768px */
+@media (max-width: 768px) {
+    .precio-images-container {
+        gap: 1.5rem;
+    }
+    
+    .precio-image {
+        width: 95%;
+        max-width: 350px;
+    }
+}
