@@ -2036,7 +2036,8 @@ ul li::before {
 .precio-image {
     display: block !important;
     width: 45%;
-    max-width: 500px;
+    max-width: 400px;
+    max-height: 250px;
     height: auto;
     object-fit: contain;
     border-radius: 8px;
@@ -2052,8 +2053,10 @@ ul li::before {
     }
     
     .precio-image {
-        width: 100%;
-        max-width: 100%;
+        width: 90%;
+        max-width: 400px;
+        max-height: 250px;
         height: auto;
+        margin: 0 auto;
     }
 }
