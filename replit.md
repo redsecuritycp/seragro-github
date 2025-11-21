@@ -28,7 +28,7 @@ Preferred communication style: Simple, everyday language.
 ### Page Structure
 - **Core Pages**: Homepage (`index.html`), dedicated product pages (T50, T100, Mavic 3), firmware update instructions (`firmware-generador.html`), privacy policy (`privacidad.html`), and terms and conditions (`terminos.html`).
 - **Consistent Layout**: All pages share a unified header and navigation structure.
-- **Pricing Section**: Homepage features a dual pricing display showing AGRAS T100 and T50 kits/accessories with fully responsive design. Images: `public/imagenes/precio_t100.png` and `public/imagenes/precio_t50.png`. Desktop: 45% width (max 500px) side-by-side. Mobile (<768px): 95% width (max 350px) stacked vertically. Uses `.precio-images-container` and `.precio-image` CSS classes with rounded corners and shadow styling.
+- **Pricing Section**: Homepage features a dual pricing display showing AGRAS T100 and T50 kits/accessories with fully responsive design. Images: `public/imagenes/precio_t100.png` and `public/imagenes/precio_t50.png`. Desktop: 45% width (max 500px) side-by-side. Mobile (<768px): 100% width stacked vertically with 1rem padding. Uses `.precio-images-container` and `.precio-image` CSS classes with rounded corners and shadow styling. Images forced visible with `display: block !important` to prevent hiding.
 
 ### Interactive Features
 - **Mobile Navigation**: Hamburger menu with toggle functionality.
