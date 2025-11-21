@@ -2034,6 +2034,7 @@ ul li::before {
 }
 
 .precio-image {
+    display: block !important;
     width: 45%;
     max-width: 500px;
     height: auto;
@@ -2047,10 +2048,12 @@ ul li::before {
 @media (max-width: 768px) {
     .precio-images-container {
         gap: 1.5rem;
+        padding: 0 1rem;
     }
     
     .precio-image {
-        width: 95%;
-        max-width: 350px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 }
