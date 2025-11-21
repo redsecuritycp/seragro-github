@@ -56,8 +56,9 @@ Preferred communication style: Simple, everyday language.
 - **Video Presentation Modal**: A centered modal displaying a promotional video (`/videos/mavilda-presentacion.mp4`).
     - **Trigger Button**: Green olive-colored button labeled "Ver presentación" positioned directly below the "CONTACTANOS" button in the hero section, using flexbox column layout (`.hero-buttons` container).
     - **Modal Design**: Semi-transparent dark overlay with centered content, featuring rounded corners (`border-radius: 16px`) on video player.
-    - **Video Behavior**: Video does NOT autoplay - only plays when user clicks. Uses `preload="metadata"` to prevent automatic playback. Video occupies 90% modal width with responsive sizing.
-    - **Close Functionality**: White circular X button in top-right corner, plus click-outside-to-close on overlay and Escape key support. Fade-out animation on close with automatic video pause and reset.
+    - **Video Behavior**: Video does NOT autoplay - remains muted and paused when modal opens. User must manually click play button and can unmute using native video controls. This prevents accidental playback on mobile devices and ensures iOS/Safari compatibility (browsers block unmuted autoplay).
+    - **Mobile Protection**: Uses `preventDefault()` and `stopPropagation()` on button click events to prevent ghost taps and accidental modal activation on mobile devices.
+    - **Close Functionality**: White circular X button in top-right corner, plus click-outside-to-close on overlay and Escape key support. Fade-out animation on close with automatic video pause, mute, and reset to beginning.
     - **JavaScript**: Implemented in `/js/presentacion-modal.js` with DOMContentLoaded event handling and proper cleanup on modal close.
 
 ### Styling Approach
