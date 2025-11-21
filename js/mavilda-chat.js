@@ -436,6 +436,7 @@ function openChat() {
 
     if (!isOpen) {
         isOpen = true;
+        window.isChatOpen = true;
         chatWindow.style.display = "flex";
         document.getElementById("mavilda-chat-input").focus();
 
@@ -448,6 +449,7 @@ function closeChat() {
 
     if (isOpen) {
         isOpen = false;
+        window.isChatOpen = false;
         chatWindow.style.display = "none";
 
         // Mostrar botón principal de nuevo

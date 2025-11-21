@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Abrir modal - SOLO con click directo del usuario
     btn.addEventListener('click', function(e) {
+        // ✅ PROTECCIÓN: Si el chat de Mavilda está abierto, NO abrir el modal
+        if (window.isChatOpen === true) {
+            return;
+        }
+
         // ✅ PROTECCIÓN: Verificar que es un evento "trusted" (no programático)
         if (!e.isTrusted) {
             return;
