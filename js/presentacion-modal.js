@@ -9,15 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('presentacion-video');
 
     // Abrir modal
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
         modal.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevenir scroll
         
-        // ✅ Activar audio y reproducir automáticamente
-        video.muted = false;
-        video.play().catch(err => {
-            console.log('Error al reproducir video:', err);
-        });
+        // ✅ Asegurar que video esté muteado - usuario controla play/unmute manualmente
+        // Esto evita que iOS/Safari bloqueen la reproducción
+        video.muted = true;
     });
 
     // Cerrar modal
