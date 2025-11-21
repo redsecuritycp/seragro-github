@@ -2020,3 +2020,38 @@ ul li::before {
     transform: translateY(0) !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
 }
+
+/* ========================================== */
+/* PRECIOS CONTAINER - DOS IMÁGENES LADO A LADO */
+/* ========================================== */
+.precios-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.precio-imagen {
+    flex: 1;
+    min-width: 280px;
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .precios-container {
+        gap: 1rem;
+        flex-direction: column;
+    }
+    
+    .precio-imagen {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
