@@ -436,15 +436,8 @@ function openChat() {
 
     if (!isOpen) {
         isOpen = true;
-        window.isChatOpen = true;
         chatWindow.style.display = "flex";
         document.getElementById("mavilda-chat-input").focus();
-
-        // Deshabilitar botón de presentación para evitar clicks automáticos de Safari/iPhone
-        const presentacionBtn = document.getElementById("ver-presentacion-btn");
-        if (presentacionBtn) {
-            presentacionBtn.disabled = true;
-        }
 
         enviarSaludoAutomatico();
     }
@@ -455,14 +448,7 @@ function closeChat() {
 
     if (isOpen) {
         isOpen = false;
-        window.isChatOpen = false;
         chatWindow.style.display = "none";
-
-        // Habilitar botón de presentación nuevamente
-        const presentacionBtn = document.getElementById("ver-presentacion-btn");
-        if (presentacionBtn) {
-            presentacionBtn.disabled = false;
-        }
 
         // Mostrar botón principal de nuevo
         if (

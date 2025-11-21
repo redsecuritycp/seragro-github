@@ -56,20 +56,8 @@ Preferred communication style: Simple, everyday language.
 - **Video Presentation Modal**: A centered modal displaying a promotional video (`/videos/mavilda-presentacion.mp4`).
     - **Trigger Button**: Green olive-colored button labeled "Ver presentación" positioned directly below the "CONTACTANOS" button in the hero section, using flexbox column layout (`.hero-buttons` container).
     - **Modal Design**: Semi-transparent dark overlay with centered content, featuring rounded corners (`border-radius: 16px`) on video player.
-    - **Video Behavior**: Video does NOT autoplay - remains muted and paused when modal opens. User must manually click play button and can unmute using native video controls. This prevents accidental playback on mobile devices and ensures iOS/Safari compatibility (browsers block unmuted autoplay).
-    - **Accidental Activation Protection**: Multi-layer security system to prevent unwanted modal activation:
-        - **Chat State Guard**: Checks `window.isChatOpen` flag - if Mavilda chat is active, modal cannot open
-        - **Page Scope**: Script only executes on homepage (pathname check for `/`, `/index.html`)
-        - **Trusted Events Only**: Requires `e.isTrusted` validation, blocking programmatic `btn.click()` calls
-        - **User Gesture Flag**: `allowModalOpen` flag ensures modal only opens during direct user click interaction
-        - **Button State Validation**: Checks button is enabled before activation
-        - **Event Target Validation**: Verifies click originates from button, not event bubbling
-        - **Contact Menu Integration**: Button automatically disables when "Hablá con nosotros" menu opens (managed in `/js/unified-contact.js`)
-        - **Safari/iPhone Synthetic Click Protection**: Button `#ver-presentacion-btn` is physically disabled (`disabled=true`) when Mavilda chat opens and re-enabled when chat closes. This prevents Safari from synthesizing automatic clicks on the first focusable button when users press Enter in the chat input field - a browser behavior specific to iOS/Safari that cannot be prevented with event flags alone. Implemented in `openChat()` and `closeChat()` functions in `/js/mavilda-chat.js`.
-        - This prevents interference with Mavilda chat interactions and other user workflows
-        - Global flag `window.isChatOpen` set in `/js/mavilda-chat.js` to coordinate state between chat and modal
-    - **Mobile Protection**: Uses `preventDefault()` and `stopPropagation()` on button click events to prevent ghost taps on mobile devices.
-    - **Close Functionality**: White circular X button in top-right corner, plus click-outside-to-close on overlay and Escape key support. Fade-out animation on close with automatic video pause, mute, and reset to beginning.
+    - **Video Behavior**: Video does NOT autoplay - only plays when user clicks. Uses `preload="metadata"` to prevent automatic playback. Video occupies 90% modal width with responsive sizing.
+    - **Close Functionality**: White circular X button in top-right corner, plus click-outside-to-close on overlay and Escape key support. Fade-out animation on close with automatic video pause and reset.
     - **JavaScript**: Implemented in `/js/presentacion-modal.js` with DOMContentLoaded event handling and proper cleanup on modal close.
 
 ### Styling Approach
