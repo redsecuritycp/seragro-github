@@ -1,333 +1,560 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            http-equiv="Cache-Control"
+            content="no-cache, no-store, must-revalidate"
+        />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <title>SER AGRO - Drones Agrícolas Profesionales</title>
+        <link rel="stylesheet" href="style.css?v=1763737200" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title>SER AGRO - Drones Agrícolas Profesionales</title>
-    <link rel="stylesheet" href="style.css?v=1763737200">
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17289441166"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17289441166"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {dataLayer.push(arguments);}
-        gtag('js', new Date());
+            gtag("config", "AW-17289441166");
+        </script>
+    </head>
 
-        gtag('config', 'AW-17289441166');
-    </script>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">
+                    <img
+                        src="imagenes/logo blanco.png"
+                        alt="SER.AGRO - Drones Agrícolas"
+                    />
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">EQUIPOS</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="dji-agras-t50.html">DJI AGRAS T50</a>
+                            </li>
+                            <li>
+                                <a href="DJI-Agras-T100.html">DJI AGRAS T100</a>
+                            </li>
+                            <li>
+                                <a href="dji-mavic-3.html"
+                                    >DJI MAVIC 3 MULTISPECTRAL</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">DESCARGAS</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a
+                                    href="attached_assets/ficha tecnica t100_1756986016829.pdf"
+                                    download="Ficha-Tecnica-DJI-Agras-T100.pdf"
+                                    >FICHA TÉCNICA T100</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="attached_assets/ficha tecnica t50_1756986016828.pdf"
+                                    download="Ficha-Tecnica-DJI-Agras-T50.pdf"
+                                    >FICHA TÉCNICA T50</a
+                                >
+                            </li>
+                            <li>
+                                <a href="firmware-generador.html"
+                                    >ACTUALIZACIÓN FIRMWARE GENERADOR</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </header>
 
-</head>
-
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">
-                <img src="imagenes/logo blanco.png" alt="SER.AGRO - Drones Agrícolas">
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">HOME</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">EQUIPOS</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="dji-agras-t50.html">DJI AGRAS T50</a></li>
-                        <li><a href="DJI-Agras-T100.html">DJI AGRAS T100</a></li>
-                        <li><a href="dji-mavic-3.html">DJI MAVIC 3 MULTISPECTRAL</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">DESCARGAS</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="attached_assets/ficha tecnica t100_1756986016829.pdf"
-                                download="Ficha-Tecnica-DJI-Agras-T100.pdf">FICHA TÉCNICA T100</a></li>
-                        <li><a href="attached_assets/ficha tecnica t50_1756986016828.pdf"
-                                download="Ficha-Tecnica-DJI-Agras-T50.pdf">FICHA TÉCNICA T50</a></li>
-                        <li><a href="firmware-generador.html">ACTUALIZACIÓN FIRMWARE GENERADOR</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1 class="hero-title">Drones Agrícolas</h1>
-            <h2 class="hero-subtitle">Tecnología avanzada: optimiza la producción agrícola, minimiza el impacto
-                ambiental</h2>
-            <div class="hero-buttons">
-                <a href="#contacto" class="btn-primary">Contactanos</a>
-                <button id="ver-presentacion-btn" class="ver-presentacion-btn">Ver presentación</button>
-            </div>
-        </div>
-        <div class="hero-video">
-            <video autoplay muted loop>
-                <source src="videos/dji_t100_web_optimized.mp4" type="video/mp4">
-            </video>
-        </div>
-    </section>
-
-    <!-- Precios T100 y T50 -->
-    <section class="intro">
-        <div class="container">
-            <div class="intro-content">
-                <div class="precio-images-container">
-                    <img src="imagenes/precio_t100.png" alt="Precios AGRAS T100" class="precio-image">
-                    <img src="imagenes/precio_t50.png" alt="Precios AGRAS T50" class="precio-image">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title">Drones Agrícolas</h1>
+                <h2 class="hero-subtitle">
+                    Tecnología avanzada: optimiza la producción agrícola,
+                    minimiza el impacto ambiental
+                </h2>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn-primary">Contactanos</a>
+                    <button
+                        id="ver-presentacion-btn"
+                        class="ver-presentacion-btn"
+                    >
+                        Ver presentación
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Introducción -->
-    <section class="intro">
-        <div class="container">
-            <div class="intro-content">
-                <p><strong>En SER AGRO creemos en un futuro en el que la tecnología, la ecología y la producción
-                        agrícola trabajen en armonía.</strong></p>
-                <p>Somos pioneros en la revolución tecnológica de drones, desde los primeros modelos de consumo hasta la
-                    actualidad, enfocándonos en el sector agropecuario. Nos enorgullecemos de ser precursores en la
-                    democratización de la tecnología agropecuaria, permitiendo a agricultores de todos los tamaños y
-                    niveles de experiencia acceder a soluciones de vanguardia.</p>
+            <div class="hero-video">
+                <video autoplay muted loop>
+                    <source
+                        src="videos/dji_t100_web_optimized.mp4"
+                        type="video/mp4"
+                    />
+                </video>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Beneficios del uso de drones -->
-    <section class="features">
-        <div class="container">
-            <h2>Beneficios del uso de drones</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📈</div>
-                    <h3>Aumento de la productividad y eficiencia</h3>
-                    <p>Los drones sirven como "ojo en el cielo" para los productores, contribuyendo en recorridas de
-                        campos, control de aguadas, de cultivos, entre otros. También, dada la capacidad de seguir un
-                        plan de vuelo programado, tienen una participación más directa en la agricultura de precisión,
-                        realizando tareas como monitoreos, siembra al voleo, fertilización y pulverización.</p>
+        <!-- Precios T100 y T50 -->
+        <section class="intro">
+            <div class="container">
+                <div class="intro-content">
+                    <div class="precio-images-container">
+                        <img
+                            src="imagenes/precio_t100.png"
+                            alt="Precios AGRAS T100"
+                            class="precio-image"
+                        />
+                        <img
+                            src="imagenes/precio_t50.png"
+                            alt="Precios AGRAS T50"
+                            class="precio-image"
+                        />
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Reducción de costos</h3>
-                    <p>La alta resolución de las imágenes de un dron multiespectral, más la capacidad del Agras de
-                        aplicar ultrabajo volumen de caldo, sumadas a la automatización de las tareas dirigidas por GPS,
-                        resultan en una precisión de aplicación que permite reducir costos.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🗺️</div>
-                    <h3>Optimización agrícola</h3>
-                    <p>Las imágenes NDVI procesadas a partir de las imágenes de un dron multiespectral, permiten
-                        detectar problemas de salud de los cultivos antes de que puedan ser observadas por el ojo
-                        humano, permitiendo tomar acciones preventivas. En efecto, se genera una menor pérdida de
-                        rendimiento de los cultivos, menor gasto en fitosanitarios y reducción del impacto ambiental.
+            </div>
+        </section>
+
+        <!-- Introducción -->
+        <section class="intro">
+            <div class="container">
+                <div class="intro-content">
+                    <p>
+                        <strong
+                            >En SER AGRO creemos en un futuro en el que la
+                            tecnología, la ecología y la producción agrícola
+                            trabajen en armonía.</strong
+                        >
+                    </p>
+                    <p>
+                        Somos pioneros en la revolución tecnológica de drones,
+                        desde los primeros modelos de consumo hasta la
+                        actualidad, enfocándonos en el sector agropecuario. Nos
+                        enorgullecemos de ser precursores en la democratización
+                        de la tecnología agropecuaria, permitiendo a
+                        agricultores de todos los tamaños y niveles de
+                        experiencia acceder a soluciones de vanguardia.
                     </p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Fácil de operar</h3>
-                    <p>Cuentan con una interfaz amigable, un diseño intuitivo para facilitar su uso por agricultores con
-                        diversos niveles de habilidad y les permiten a los usuarios supervisar sus campos de manera
-                        remota.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">♻️</div>
-                    <h3>Cuidado del medio ambiente</h3>
-                    <p>La posibilidad de reducir la cantidad de agua a utilizar, la reducción del uso de fitosanitarios,
-                        la no utilización de combustibles fósiles y la posibilidad de aplicación diferenciada, reducen,
-                        sin lugar a dudas, el impacto ambiental de la actividad.</p>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Industrias potenciadas -->
-    <section class="operations">
-        <div class="container">
-            <h2>Industrias potenciadas por el uso de drones</h2>
-            <div class="operations-image">
-                <img src="attached_assets/Industrias potenciadas por el uso de drones_1752696415722.png"
-                    alt="Industrias potenciadas por el uso de drones"
-                    style="width: 100%; max-width: 800px; margin: 0 auto 2rem; display: block; border-radius: 10px;">
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Te acompañamos de punta a punta -->
-    <section class="vision-radar">
-        <div class="container">
-            <h2>Te acompañamos de punta a punta</h2>
-            <div class="vision-features">
-                <div class="vision-item">
-                    <div class="feature-icon">🔝</div>
-                    <h4>Demostraciones informativas</h4>
-                    <p>Ver para creer. Demostraciones en toda la Argentina</p>
-                </div>
-                <div class="vision-item">
-                    <div class="feature-icon">🎧</div>
-                    <h4>Asesoría personalizada</h4>
-                    <p>Expertos en drones y agricultura para resolver todas tus consultas</p>
-                </div>
-                <div class="vision-item">
-                    <div class="feature-icon">🏷️</div>
-                    <h4>Venta con garantía</h4>
-                    <p>Garantía oficial DJI</p>
-                </div>
-                <div class="vision-item">
-                    <div class="feature-icon">💳</div>
-                    <h4>Financiación</h4>
-                    <p>Diversos planes de financiamiento</p>
-                </div>
-                <div class="vision-item">
-                    <div class="feature-icon">🎓</div>
-                    <h4>Capacitaciones</h4>
-                    <p>Capacitaciones para empresas y productores en locación del cliente</p>
-                </div>
-                <div class="vision-item">
-                    <div class="feature-icon">🔧</div>
-                    <h4>Servicio Post-Venta</h4>
-                    <p>Servicio técnico y servicio de mantenimiento a los equipos</p>
-                </div>
-                <div class="vision-item">
-                    <div class="feature-icon">✅</div>
-                    <h4>Accesorios y repuestos</h4>
-                    <p>Stock siempre disponible</p>
-                </div>
-                <div class="vision-item">
-                    <div class="feature-icon">🤝</div>
-                    <h4>Leasing</h4>
-                    <p>Maximizar tu producción de manera accesible y eficiente</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section class="contact" id="contacto">
-        <div class="container">
-            <h2>CONTACTO</h2>
-            <p>Comunicate con SER AGRO por whatsapp, correo o completando el formulario de contacto. Uno de nuestros
-                expertos seguirá tu caso.</p>
-
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h4>Whatsapp</h4>
-                    <p><a
-                            href="https://api.whatsapp.com/send?phone=5493465432688&text=Hola%2C+vengo+desde+el+sitio+de+SER+AGRO">+54
-                            (93465) 432688</a></p>
-                </div>
-                <div class="contact-item">
-                    <h4>Email</h4>
-                    <p><a href="mailto:ser.agro@gruposer.com.ar">ser.agro@gruposer.com.ar</a></p>
-                </div>
-                <div class="contact-item">
-                    <h4>Llamados</h4>
-                    <p><a href="tel:+5493465432688">+54 (93465) 432688</a></p>
-                </div>
-            </div>
-
-            <!-- Formulario de contacto -->
-            <div class="contact-form-container">
-                <h3>Formulario de contacto:</h3>
-                <form class="contact-form" action="javascript:void(0)" method="post">
-                    <div class="form-row">
-                        <input type="text" name="nombre" placeholder="Nombre" required>
-                        <input type="text" name="apellido" placeholder="Apellido" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="tel" name="telefono" placeholder="Teléfono" required>
-                    </div>
-                    <select name="motivo" required>
-                        <option value="">Motivo de consulta</option>
-                        <option value="Inscripción a demostraciones">Inscripción a demostraciones</option>
-                        <option value="Compra de drones">Compra de drones</option>
-                        <option value="Capacitaciones">Capacitaciones</option>
-                        <option value="Servicio de mantenimiento">Servicio de mantenimiento</option>
-                        <option value="Servicio técnico">Servicio técnico</option>
-                        <option value="Leasing drones">Leasing drones</option>
-                        <option value="Accesorios y repuestos">Accesorios y repuestos</option>
-                    </select>
-                    <textarea name="mensaje" rows="5" placeholder="Escribinos tu consulta (opcional)"></textarea>
-                    <button type="submit" class="btn-primary">Enviar</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="imagenes/logo color pleno.png" alt="SER.AGRO - Drones Agrícolas" width="200">
-                    <img src="imagenes/dji agriculture1.png" alt="DJI Agriculture" width="400"
-                        style="margin-top: 1rem;">
-                    <div
-                        style="margin-top: 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
-                        <p style="margin: 0 0 0.8rem 0; color: var(--light-color); font-weight: bold; font-size: 1rem;">
-                            Representante exclusivo de</p>
-                        <img src="imagenes/LogoTektro-02.png" alt="Tektro" width="400" style="margin: 0;">
-                    </div>
-                </div>
-                <div class="footer-columns">
-                    <div class="footer-column">
-                        <h4>Oficinas</h4>
-                        <p><strong>Nuestras Oficinas:</strong><br>
-                            Omar Carrasco 2776, Rosario, Argentina<br>
-                            <strong>Horario de atención:</strong><br>
-                            Lunes a viernes de 9:00 a 18:00
+        <!-- Beneficios del uso de drones -->
+        <section class="features">
+            <div class="container">
+                <h2>Beneficios del uso de drones</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h3>Aumento de la productividad y eficiencia</h3>
+                        <p>
+                            Los drones sirven como "ojo en el cielo" para los
+                            productores, contribuyendo en recorridas de campos,
+                            control de aguadas, de cultivos, entre otros.
+                            También, dada la capacidad de seguir un plan de
+                            vuelo programado, tienen una participación más
+                            directa en la agricultura de precisión, realizando
+                            tareas como monitoreos, siembra al voleo,
+                            fertilización y pulverización.
                         </p>
                     </div>
-                    <div class="footer-column">
-                        <h4>Contacto</h4>
-                        <p>Llamados: <a href="tel:+5493465432688">+54 (93465) 432688</a></p>
-                        <p>WhatsApp: <a href="https://api.whatsapp.com/send?phone=5493465432688">+54 (93465) 432688</a>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Reducción de costos</h3>
+                        <p>
+                            La alta resolución de las imágenes de un dron
+                            multiespectral, más la capacidad del Agras de
+                            aplicar ultrabajo volumen de caldo, sumadas a la
+                            automatización de las tareas dirigidas por GPS,
+                            resultan en una precisión de aplicación que permite
+                            reducir costos.
                         </p>
-                        <p>Email: <a href="mailto:ser.agro@gruposer.com.ar">ser.agro@gruposer.com.ar</a></p>
-                        <p>Lun. a vie. de 8:00 a 17:00</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🗺️</div>
+                        <h3>Optimización agrícola</h3>
+                        <p>
+                            Las imágenes NDVI procesadas a partir de las
+                            imágenes de un dron multiespectral, permiten
+                            detectar problemas de salud de los cultivos antes de
+                            que puedan ser observadas por el ojo humano,
+                            permitiendo tomar acciones preventivas. En efecto,
+                            se genera una menor pérdida de rendimiento de los
+                            cultivos, menor gasto en fitosanitarios y reducción
+                            del impacto ambiental.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Fácil de operar</h3>
+                        <p>
+                            Cuentan con una interfaz amigable, un diseño
+                            intuitivo para facilitar su uso por agricultores con
+                            diversos niveles de habilidad y les permiten a los
+                            usuarios supervisar sus campos de manera remota.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">♻️</div>
+                        <h3>Cuidado del medio ambiente</h3>
+                        <p>
+                            La posibilidad de reducir la cantidad de agua a
+                            utilizar, la reducción del uso de fitosanitarios, la
+                            no utilización de combustibles fósiles y la
+                            posibilidad de aplicación diferenciada, reducen, sin
+                            lugar a dudas, el impacto ambiental de la actividad.
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>Copyright © 2025 Agro | Grupo SER | Powered by FabeDesign</p>
-                <p style="font-size: 0.875rem; margin-top: 0.5rem;">
-                    Website operado por SER ELECTRONICA Y COMUNICACIONES S.A.S. - CUIT: 30-71854571-0
+        </section>
+
+        <!-- Industrias potenciadas -->
+        <section class="operations">
+            <div class="container">
+                <h2>Industrias potenciadas por el uso de drones</h2>
+                <div class="operations-image">
+                    <img
+                        src="attached_assets/Industrias potenciadas por el uso de drones_1752696415722.png"
+                        alt="Industrias potenciadas por el uso de drones"
+                        style="
+                            width: 100%;
+                            max-width: 800px;
+                            margin: 0 auto 2rem;
+                            display: block;
+                            border-radius: 10px;
+                        "
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Te acompañamos de punta a punta -->
+        <section class="vision-radar">
+            <div class="container">
+                <h2>Te acompañamos de punta a punta</h2>
+                <div class="vision-features">
+                    <div class="vision-item">
+                        <div class="feature-icon">🔝</div>
+                        <h4>Demostraciones informativas</h4>
+                        <p>
+                            Ver para creer. Demostraciones en toda la Argentina
+                        </p>
+                    </div>
+                    <div class="vision-item">
+                        <div class="feature-icon">🎧</div>
+                        <h4>Asesoría personalizada</h4>
+                        <p>
+                            Expertos en drones y agricultura para resolver todas
+                            tus consultas
+                        </p>
+                    </div>
+                    <div class="vision-item">
+                        <div class="feature-icon">🏷️</div>
+                        <h4>Venta con garantía</h4>
+                        <p>Garantía oficial DJI</p>
+                    </div>
+                    <div class="vision-item">
+                        <div class="feature-icon">💳</div>
+                        <h4>Financiación</h4>
+                        <p>Diversos planes de financiamiento</p>
+                    </div>
+                    <div class="vision-item">
+                        <div class="feature-icon">🎓</div>
+                        <h4>Capacitaciones</h4>
+                        <p>
+                            Capacitaciones para empresas y productores en
+                            locación del cliente
+                        </p>
+                    </div>
+                    <div class="vision-item">
+                        <div class="feature-icon">🔧</div>
+                        <h4>Servicio Post-Venta</h4>
+                        <p>
+                            Servicio técnico y servicio de mantenimiento a los
+                            equipos
+                        </p>
+                    </div>
+                    <div class="vision-item">
+                        <div class="feature-icon">✅</div>
+                        <h4>Accesorios y repuestos</h4>
+                        <p>Stock siempre disponible</p>
+                    </div>
+                    <div class="vision-item">
+                        <div class="feature-icon">🤝</div>
+                        <h4>Leasing</h4>
+                        <p>
+                            Maximizar tu producción de manera accesible y
+                            eficiente
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="contact" id="contacto">
+            <div class="container">
+                <h2>CONTACTO</h2>
+                <p>
+                    Comunicate con SER AGRO por whatsapp, correo o completando
+                    el formulario de contacto. Uno de nuestros expertos seguirá
+                    tu caso.
                 </p>
-                <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.7;">
-                    <a href="privacidad.html" style="color: inherit; text-decoration: none;">Política de Privacidad</a> | 
-                    <a href="terminos.html" style="color: inherit; text-decoration: none;">Términos y Condiciones</a>
-                </p>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>Whatsapp</h4>
+                        <p>
+                            <a
+                                href="https://api.whatsapp.com/send?phone=5493465432688&text=Hola%2C+vengo+desde+el+sitio+de+SER+AGRO"
+                                >+54 (93465) 432688</a
+                            >
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>
+                            <a href="mailto:ser.agro@gruposer.com.ar"
+                                >ser.agro@gruposer.com.ar</a
+                            >
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Llamados</h4>
+                        <p>
+                            <a href="tel:+5493465432688">+54 (93465) 432688</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Formulario de contacto -->
+                <div class="contact-form-container">
+                    <h3>Formulario de contacto:</h3>
+                    <form
+                        class="contact-form"
+                        action="javascript:void(0)"
+                        method="post"
+                    >
+                        <div class="form-row">
+                            <input
+                                type="text"
+                                name="nombre"
+                                placeholder="Nombre"
+                                required
+                            />
+                            <input
+                                type="text"
+                                name="apellido"
+                                placeholder="Apellido"
+                                required
+                            />
+                        </div>
+                        <div class="form-row">
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                required
+                            />
+                            <input
+                                type="tel"
+                                name="telefono"
+                                placeholder="Teléfono"
+                                required
+                            />
+                        </div>
+                        <select name="motivo" required>
+                            <option value="">Motivo de consulta</option>
+                            <option value="Inscripción a demostraciones">
+                                Inscripción a demostraciones
+                            </option>
+                            <option value="Compra de drones">
+                                Compra de drones
+                            </option>
+                            <option value="Capacitaciones">
+                                Capacitaciones
+                            </option>
+                            <option value="Servicio de mantenimiento">
+                                Servicio de mantenimiento
+                            </option>
+                            <option value="Servicio técnico">
+                                Servicio técnico
+                            </option>
+                            <option value="Leasing drones">
+                                Leasing drones
+                            </option>
+                            <option value="Accesorios y repuestos">
+                                Accesorios y repuestos
+                            </option>
+                        </select>
+                        <textarea
+                            name="mensaje"
+                            rows="5"
+                            placeholder="Escribinos tu consulta (opcional)"
+                        ></textarea>
+                        <button type="submit" class="btn-primary">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img
+                            src="imagenes/logo color pleno.png"
+                            alt="SER.AGRO - Drones Agrícolas"
+                            width="200"
+                        />
+                        <img
+                            src="imagenes/dji agriculture1.png"
+                            alt="DJI Agriculture"
+                            width="400"
+                            style="margin-top: 1rem"
+                        />
+                        <div
+                            style="
+                                margin-top: 1.5rem;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                text-align: center;
+                            "
+                        >
+                            <p
+                                style="
+                                    margin: 0 0 0.8rem 0;
+                                    color: var(--light-color);
+                                    font-weight: bold;
+                                    font-size: 1rem;
+                                "
+                            >
+                                Representante exclusivo de
+                            </p>
+                            <img
+                                src="imagenes/LogoTektro-02.png"
+                                alt="Tektro"
+                                width="400"
+                                style="margin: 0"
+                            />
+                        </div>
+                    </div>
+                    <div class="footer-columns">
+                        <div class="footer-column">
+                            <h4>Oficinas</h4>
+                            <p>
+                                <strong>Nuestras Oficinas:</strong><br />
+                                Omar Carrasco 2776, Rosario, Argentina<br />
+                                <strong>Horario de atención:</strong><br />
+                                Lunes a viernes de 9:00 a 18:00
+                            </p>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Contacto</h4>
+                            <p>
+                                Llamados:
+                                <a href="tel:+5493465432688"
+                                    >+54 (93465) 432688</a
+                                >
+                            </p>
+                            <p>
+                                WhatsApp:
+                                <a
+                                    href="https://api.whatsapp.com/send?phone=5493465432688"
+                                    >+54 (93465) 432688</a
+                                >
+                            </p>
+                            <p>
+                                Email:
+                                <a href="mailto:ser.agro@gruposer.com.ar"
+                                    >ser.agro@gruposer.com.ar</a
+                                >
+                            </p>
+                            <p>Lun. a vie. de 8:00 a 17:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        Copyright © 2025 Agro | Grupo SER | Powered by
+                        FabeDesign
+                    </p>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem">
+                        Website operado por SER ELECTRONICA Y COMUNICACIONES
+                        S.A.S. - CUIT: 30-71854571-0
+                    </p>
+                    <p
+                        style="
+                            font-size: 0.75rem;
+                            margin-top: 0.5rem;
+                            opacity: 0.7;
+                        "
+                    >
+                        <a
+                            href="privacidad.html"
+                            style="color: inherit; text-decoration: none"
+                            >Política de Privacidad</a
+                        >
+                        |
+                        <a
+                            href="terminos.html"
+                            style="color: inherit; text-decoration: none"
+                            >Términos y Condiciones</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal de Presentación -->
+        <div id="presentacion-modal" class="presentacion-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button id="close-modal-btn" class="close-modal-btn">
+                    &times;
+                </button>
+                <video id="presentacion-video" controls preload="none" muted>
+                    <source
+                        src="/videos/mavilda-presentacion.mp4"
+                        type="video/mp4"
+                    />
+                    Tu navegador no soporta la reproducción de video.
+                </video>
             </div>
         </div>
-    </footer>
 
-    <!-- Modal de Presentación -->
-    <div id="presentacion-modal" class="presentacion-modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button id="close-modal-btn" class="close-modal-btn">&times;</button>
-            <video id="presentacion-video" controls preload="none" muted>
-                <source src="/videos/mavilda-presentacion.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
-        </div>
-    </div>
-
-    <script type="module" src="/main-app.js"></script>
-    <script type="module" src="/js/mavilda-chat.js"></script>
-    <script type="module" src="/js/unified-contact.js"></script>
-    <script type="module" src="/js/hero-video.js"></script>
-    <script type="module" src="/js/presentacion-modal.js"></script>
-</body>
-
+        <script type="module" src="/main-app.js"></script>
+        <script type="module" src="/js/mavilda-chat.js"></script>
+        <script type="module" src="/js/unified-contact.js"></script>
+        <script type="module" src="/js/hero-video.js"></script>
+        <script type="module" src="/js/presentacion-modal.js"></script>
+        <script src="precio-images-zoom.js"></script>
+    </body>
 </html>
