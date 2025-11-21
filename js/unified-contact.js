@@ -875,15 +875,28 @@ function addStyles() {
 function toggleMenu() {
     const button = document.getElementById("unified-contact-button");
     const menu = document.getElementById("unified-contact-menu");
+    const presentacionBtn = document.getElementById("ver-presentacion-btn");
 
     menuOpen = !menuOpen;
 
     if (menuOpen) {
         menu.classList.add("show");
         button.classList.add("menu-open");
+        // Deshabilitar botón de presentación para evitar activación accidental en móviles
+        if (presentacionBtn) {
+            presentacionBtn.disabled = true;
+            presentacionBtn.style.pointerEvents = "none";
+            presentacionBtn.style.opacity = "0.5";
+        }
     } else {
         menu.classList.remove("show");
         button.classList.remove("menu-open");
+        // Habilitar nuevamente el botón de presentación
+        if (presentacionBtn) {
+            presentacionBtn.disabled = false;
+            presentacionBtn.style.pointerEvents = "auto";
+            presentacionBtn.style.opacity = "1";
+        }
     }
 }
 
