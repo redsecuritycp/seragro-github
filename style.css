@@ -2082,7 +2082,7 @@ ul li::before {
 }
 
 /* ========================================== */
-/* IMÁGENES DE PRECIOS T100 y T50 */
+/* IMÁGENES DE PRECIOS - APILADAS EN PC Y MÓVIL */
 /* ========================================== */
 .precio-images-container {
     display: flex;
@@ -2091,12 +2091,14 @@ ul li::before {
     justify-content: center;
     align-items: center;
     margin: 2rem auto;
+    padding: 0 5%;
 }
 
 .precio-image {
     display: block !important;
     width: 90% !important;
-    height: auto !important;
+    max-width: none !important;
+    height: auto;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -2107,10 +2109,11 @@ ul li::before {
 @media (max-width: 768px) {
     .precio-images-container {
         gap: 1.5rem;
-        padding: 0 1rem;
+        padding: 0 5%;
     }
 
     .precio-image {
         width: 90% !important;
+        max-width: 500px !important;
     }
 }
