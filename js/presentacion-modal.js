@@ -61,6 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
+        // Protección adicional: NO abrir si el chat está activo
+        if (window.isChatOpen === true) {
+            return;
+        }
+        
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
         video.muted = true;
