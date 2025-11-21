@@ -57,9 +57,17 @@ Preferred communication style: Simple, everyday language.
     - **Trigger Button**: Green olive-colored button labeled "Ver presentación" positioned directly below the "CONTACTANOS" button in the hero section, using flexbox column layout (`.hero-buttons` container).
     - **Modal Design**: Semi-transparent dark overlay with centered content, featuring rounded corners (`border-radius: 16px`) on video player.
     - **Video Behavior**: Video does NOT autoplay - remains muted and paused when modal opens. User must manually click play button and can unmute using native video controls. This prevents accidental playback on mobile devices and ensures iOS/Safari compatibility (browsers block unmuted autoplay).
-    - **Mobile Protection**: Uses `preventDefault()` and `stopPropagation()` on button click events to prevent ghost taps and accidental modal activation on mobile devices. Additionally, the button is automatically disabled (`disabled = true`, `pointerEvents = "none"`, `opacity = "0.5"`) when the "Hablá con nosotros" contact menu opens, preventing ghost clicks on iPhone and other devices. Button is re-enabled when the contact menu closes.
+    - **Accidental Activation Protection**: Multi-layer security system to prevent unwanted modal activation:
+        - **Page Scope**: Script only executes on homepage (pathname check for `/`, `/index.html`)
+        - **Trusted Events Only**: Requires `e.isTrusted` validation, blocking programmatic `btn.click()` calls
+        - **User Gesture Flag**: `allowModalOpen` flag ensures modal only opens during direct user click interaction
+        - **Button State Validation**: Checks button is enabled before activation
+        - **Event Target Validation**: Verifies click originates from button, not event bubbling
+        - **Contact Menu Integration**: Button automatically disables when "Hablá con nosotros" menu opens (managed in `/js/unified-contact.js`)
+        - This prevents interference with Mavilda chat interactions and other user workflows
+    - **Mobile Protection**: Uses `preventDefault()` and `stopPropagation()` on button click events to prevent ghost taps on mobile devices.
     - **Close Functionality**: White circular X button in top-right corner, plus click-outside-to-close on overlay and Escape key support. Fade-out animation on close with automatic video pause, mute, and reset to beginning.
-    - **JavaScript**: Implemented in `/js/presentacion-modal.js` with DOMContentLoaded event handling and proper cleanup on modal close. Button state management handled in `/js/unified-contact.js` via the `toggleMenu()` function.
+    - **JavaScript**: Implemented in `/js/presentacion-modal.js` with DOMContentLoaded event handling and proper cleanup on modal close.
 
 ### Styling Approach
 - **CSS Variables**: Centralized color scheme, predominantly agricultural green (#2E7D32, #1B5E20).
