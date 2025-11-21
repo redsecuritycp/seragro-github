@@ -58,6 +58,7 @@ Preferred communication style: Simple, everyday language.
     - **Modal Design**: Semi-transparent dark overlay with centered content, featuring rounded corners (`border-radius: 16px`) on video player.
     - **Video Behavior**: Video does NOT autoplay - remains muted and paused when modal opens. User must manually click play button and can unmute using native video controls. This prevents accidental playback on mobile devices and ensures iOS/Safari compatibility (browsers block unmuted autoplay).
     - **Accidental Activation Protection**: Multi-layer security system to prevent unwanted modal activation:
+        - **Chat State Guard**: Checks `window.isChatOpen` flag - if Mavilda chat is active, modal cannot open
         - **Page Scope**: Script only executes on homepage (pathname check for `/`, `/index.html`)
         - **Trusted Events Only**: Requires `e.isTrusted` validation, blocking programmatic `btn.click()` calls
         - **User Gesture Flag**: `allowModalOpen` flag ensures modal only opens during direct user click interaction
@@ -65,6 +66,7 @@ Preferred communication style: Simple, everyday language.
         - **Event Target Validation**: Verifies click originates from button, not event bubbling
         - **Contact Menu Integration**: Button automatically disables when "Hablá con nosotros" menu opens (managed in `/js/unified-contact.js`)
         - This prevents interference with Mavilda chat interactions and other user workflows
+        - Global flag `window.isChatOpen` set in `/js/mavilda-chat.js` to coordinate state between chat and modal
     - **Mobile Protection**: Uses `preventDefault()` and `stopPropagation()` on button click events to prevent ghost taps on mobile devices.
     - **Close Functionality**: White circular X button in top-right corner, plus click-outside-to-close on overlay and Escape key support. Fade-out animation on close with automatic video pause, mute, and reset to beginning.
     - **JavaScript**: Implemented in `/js/presentacion-modal.js` with DOMContentLoaded event handling and proper cleanup on modal close.
